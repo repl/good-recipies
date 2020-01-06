@@ -5,6 +5,7 @@ import com.defmacros.goodrecipes.websvc.service.QueryService;
 import com.defmacros.goodrecipes.websvc.utils.ServiceUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +20,7 @@ public class RecipeController {
 
     @GetMapping("")
     @ResponseBody
+    @PreAuthorize("hasRole('USER')")
     ServiceResponse getAll(HttpServletRequest request) {
         try {
             return ServiceResponse.ok(queryService.getAll());

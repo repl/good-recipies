@@ -6,8 +6,10 @@ apply plugin: 'com.palantir.docker'
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}"
+    implementation "io.jsonwebtoken:jjwt:${jjwt_version}"
     implementation "org.projectlombok:lombok:${lombak_version}"
     testCompileOnly("org.projectlombok:lombok:${lombak_version}")
     annotationProcessor("org.projectlombok:lombok:${lombak_version}")
