@@ -22,6 +22,10 @@ plugins {
     id 'java'
 }
 
+ext {
+    set('springCloudVersion', "Hoxton.RELEASE")
+}
+
 sourceCompatibility = 1.8
 
 repositories {

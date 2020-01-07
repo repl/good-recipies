@@ -48,5 +48,10 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{"name":"Chicken Salad"}'
 
+## Dynamically refresh config file
+curl localhost:8080/actuator/refresh -d {} -H "Content-Type: application/json"
 
+## Check properties values directly in config-service
+curl -X http://localhost:8888/application/default
+curl -X http://localhost:8888/web-service/default
 
