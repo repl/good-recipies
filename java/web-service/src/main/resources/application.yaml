@@ -24,7 +24,7 @@ spring.jpa:
   show-sql: true
   # Hibernate ddl auto (none, create, create-drop, update, validate): with "update" the database
   # schema will be automatically updated accordingly to java entities found in the project
-  hibernate.ddl-auto: none
+  hibernate.ddl-auto: update
   # Naming strategy
   #hibernate.naming-strategy: org.hibernate.cfg.DefaultComponentSafeNamingStrategy
   #hibernate.naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl

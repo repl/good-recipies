@@ -46,7 +46,7 @@ curl -X POST \
   http://localhost:8080/api/v1/recipes \
   -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTc4MzUwNjg4LCJleHAiOjE1Nzg5NTU0ODh9.ctC_wa95fGJRlWKmrmVALB34L1VNKpGQw4hsp5gxmafPyPDodUY8o8msl0pv130ZZViaoMjm5leP3KbyIrd3CQ' \
   -H 'Content-Type: application/json' \
-  -d '{"name":"Chicken Salad"}'
+  -d '{"uid": "123", "title":"Chicken Salad", "ingredients" : ["1 Pound Chicken"], "instructions": "Marinate the chicken"}'
 
 ## Dynamically refresh config file
 curl localhost:8080/actuator/refresh -d {} -H "Content-Type: application/json"
