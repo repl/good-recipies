@@ -10,7 +10,7 @@ class App extends Component {
 
   async componentDidMount() {
       console.log("fetching from web service");
-      const response = await fetch('http://10.20.20.57:8080/api/v1/recipes');
+      const response = await fetch('http://sanjudf02:8080/api/v1/recipes');
       const body = await response.json();
       console.log(body);
       this.setState({recipes: body.data, isLoading: false});
